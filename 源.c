@@ -1,6 +1,6 @@
 #define _CRT_SECURE_NO_WARNINGS
 /*
-//数组实现队列
+//鏁扮粍瀹炵幇闃熷垪
 #include<stdio.h>
 #define Maxsize 10
 int A[Maxsize];
@@ -16,7 +16,7 @@ void EnQueue(int x) {
 		front = 0;
 	}
 	else{
-		rear = rear + 1;
+		rear = (rear+1) % Maxsize; 
 	}
 	A[rear] = x;
 }
@@ -53,7 +53,7 @@ int main() {
 }
 */
 
-//链表实现队列
+//閾捐〃瀹炵幇闃熷垪
 #include<stdio.h>
 #include<stdlib.h>
 typedef struct queue {
